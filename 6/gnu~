@@ -1,0 +1,8 @@
+set encoding utf8
+set term post eps color adobeglyphnames
+set out "case1.eps"
+
+plot "data.txt" using 1:2 axes x1y1
+
+set output
+set terminal unknown

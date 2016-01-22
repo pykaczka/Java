@@ -1,0 +1,57 @@
+import java.util.*;
+import java.io.*;
+class IFS{
+	ArrayList<ArrayList<Double>> arr = new ArrayList<ArrayList<Double>>();
+	ArrayList<Para<Double, Double>> pary = new ArrayList<Para<Double, Double>>();
+	double x=0.7;
+	double y=0.2;
+	IFS(ArrayList<ArrayList<Double>> arr){
+		this.arr=arr;
+		pary.add(new Para<>(x,y));
+	}
+
+	void met(){
+		Random rd = new Random();
+		double wsp[] =  new double[6];
+		int tmp;
+		double tmp2, tmp3;
+		for( int i=0; i<10000; i++){
+			tmp= rd.nextInt(4);
+			wsp[0]=this.arr.get(tmp).get(0);
+			wsp[1]=this.arr.get(tmp).get(1);
+			wsp[2]=this.arr.get(tmp).get(2);
+			wsp[3]=this.arr.get(tmp).get(3);
+			wsp[4]=this.arr.get(tmp).get(4);
+			wsp[5]=this.arr.get(tmp).get(5);
+			tmp2=x;
+			tmp3=y;
+			x=wsp[0]*x+wsp[1]*y+wsp[2];
+			y=wsp[3]*tmp2+wsp[4]*tmp3+wsp[5];
+			pary.add(new Para<>(x,y));
+
+		}
+				
+	}
+	void zapisz(String path){
+		String s="";
+		for(int i=0; i<pary.size()-1; i++){
+			s+=pary.get(i).getT();
+			s+=" ";
+			s+=pary.get(i).getV();
+			s+="\n";
+		}
+	
+		try{
+			FileWriter fw=new FileWriter(path);
+			fw.write(s);
+			fw.close();
+		}catch(IOException e){}
+
+	}
+
+
+
+
+
+	
+}

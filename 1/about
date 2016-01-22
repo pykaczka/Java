@@ -1,0 +1,11 @@
+Katalog zawiera progrm pisany na laboratorium "Programowanie Obiektowe" przeprowadzane na AGH WfiIS.
+
+Instrukcja otrzymana do napisania tego programu:
+1) Proszę napisać kod umożliwiający odwrócenie elementów tablicy jednowymiarowej o dowolnym rozmiarze.
+
+2) Proszę utworzyć tablicę jednowymiarową wartości całkowitych o rozmiarze 8. Dla trzech dowolnych liczb całkowitych proszę znaleźć ich reprezentację w systemie dwójkowym, wykorzystując w tym celu utworzoną tablicę.
+Proszę dodać warunek sprawdzający czy rozmiar tablicy jest wystarczający, jeżeli nie należy przerwać wykonywanie pętli. Otrzymany wynik lub komunikat o niemożliwości jego otrzymania proszę wypisać na ekran. Proszę sprawdzić poprawność otrzymanego wyniku poprzez przeliczenie wartości w systemie dwójkowym na wartość w systemie dziesiętnym (4p).
+Uwaga: mamy liczbę N
+Dopóki N>0 → N/2 r. 0 lub 1
+
+3) Proszę utworzyć tablicę dwuwymiarową o liczbie wierszy równej 100, wartość w pierwszej kolumnie każdego z wierszy równa jest numerowi wiersza i traktowana będzie dalej jako wartość zmiennej x, a w drugiej kolumnie równa jest wartości dowolnej (wybranej przez Państwa) funkcji liniowej dla danego x. Dla otrzymanej tablicy proszę wartości współczynników a i b (wraz z niepewnościami) prostej dofitowywanej do danych metodą najmniejszych kwadratów.

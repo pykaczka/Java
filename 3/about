@@ -1,0 +1,1 @@
+Katalog zawiera program napisany w języku Java, który pozwala na tworzenie macierzy na trzy sposoby(tworzenie macierzy jednostkowej, macierzy z losowanymi wartościami oraz w zależności od flagi macierzy symetrycznej lub nie) oraz dokonywanie na nich operacji: dodawania, transponowania, mnożenia, sprawdzania czy macież jest ortogonalna.
