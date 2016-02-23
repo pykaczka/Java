@@ -8,3 +8,4 @@ Katalog:
   - 5 - automat komórkowy 2D, uruchomienie ładnie wygląda na dużym oknie terminala
   - 6 - parametryzacja, program tworzący fraktale
   - 7 - ćwiczenia z parametryzacji
+  - quantum_well - program do numeryczego obliczania wartości potencjału w danej siatce obliczeniowej elektrycznej kropki kwantowej
