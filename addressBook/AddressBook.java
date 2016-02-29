@@ -45,11 +45,11 @@ class AddressBook{
 			System.out.println("Error.");
 		}
 
-		System.out.println("What do you want to do now?");
+		System.out.println("\nWhat do you want to do now?");
 		Scanner in=new Scanner(System.in);
 		boolean flag=true;
 		while(flag){
-			System.out.println("s - see all contacts,\na - add new contact,\nn - search contact by number,\nr - remove contact,\ne - edit contact names,\nf - edit contact number,\nx - exit");
+			System.out.println("\ns - see all contacts,\na - add new contact,\nn - search contact by number,\nm - search contact by name,\nr - remove contact,\ne - edit contact names,\nf - edit contact number,\nx - exit");
 			System.out.println("Press key to choose an action and press enter:");
 			String tmp=in.next();
 			switch(tmp){
@@ -57,9 +57,10 @@ class AddressBook{
 					for(Map.Entry<String,Osoba> entry: kontakty.entrySet()){
 						System.out.println(entry.getKey()+"	"+entry.getValue());
 					}
+					System.out.println("");
 					break;
 				case "a":
-					System.out.println("Adding new contact.");
+					System.out.println("-----Adding new contact.-----");
 					boolean flag2=true;
 					while(flag2){
 						System.out.println("Enter phone number (no spaces).");
@@ -83,19 +84,31 @@ class AddressBook{
 						kontakty.put(tmp, new Osoba(imie, nazwisko));
 					else
 						kontakty.put(tmp, new Osoba(imie, imie2, nazwisko));
-					System.out.println("New contact added!\n");
+					System.out.println("New contact added!");
 					break;
 
 				case "n":
-					System.out.println("Searching for the owner of the number.");
+					System.out.println("-----Searching for the owner of the number.-----");
 					System.out.println("Enter number.");
 					tmp=in.next();
 					if(kontakty.containsKey(tmp)) System.out.println(kontakty.get(tmp));
-					else System.out.println("It looks like you do not have this number in your address book");
+					else System.out.println("It looks like you do not have this number in your address book\n");
+					break;
+
+				case "m":
+					System.out.println("-----Searching for the number.-----");
+					System.out.println("Enter name/surname.");
+					tmp=in.next();
+					System.out.println("Matching results:");
+					for(Map.Entry<String,Osoba> entry: kontakty.entrySet()){
+						if(entry.getValue().getImie().equals(tmp)) System.out.println(entry.getValue());
+						else if(entry.getValue().getImie2().equals(tmp)) System.out.println(entry.getValue());
+						else if(entry.getValue().getNazwisko().equals(tmp)) System.out.println(entry.getValue());
+					}
 					break;
 
 				case "r":
-					System.out.println("Removing number.");
+					System.out.println("-----Removing number.-----");
 					System.out.println("Enter number.");
 					tmp=in.next();
 					if(kontakty.containsKey(tmp)) System.out.println(kontakty.remove(tmp));
@@ -103,7 +116,7 @@ class AddressBook{
 					break;
 
 				case "e":
-					System.out.println("Editing names.");
+					System.out.println("-----Editing names.-----");
 					System.out.println("Enter number.");
 					tmp=in.next();
 					if(kontakty.containsKey(tmp)){
@@ -122,7 +135,7 @@ class AddressBook{
 					break;
 
 				case "f":
-					System.out.println("Editing numbers.");
+					System.out.println("-----Editing numbers.-----");
 					System.out.println("Enter number you want to change.");
 					tmp=in.next();
 					System.out.println("Enter new number.");
