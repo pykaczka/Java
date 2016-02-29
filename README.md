@@ -9,3 +9,4 @@ Katalog:
   - 6 - parametryzacja, program tworzący fraktale
   - 7 - ćwiczenia z parametryzacji
   - quantum_well - program do numeryczego obliczania wartości potencjału w danej siatce obliczeniowej elektrycznej kropki kwantowej
+  - addressBook - prosta książka adresowa do obsługi w konsoli, w planach rozbudowa na połączenie z bazą MySQL
